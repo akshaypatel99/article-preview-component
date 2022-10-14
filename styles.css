@@ -1,0 +1,243 @@
+:root{
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-dark-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+  --white: hsl(0, 0%, 100%);
+  --font-size: 13px;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-size: var(--font-size);
+  color: var(--dark-grayish-blue);
+  background-color: var(--light-grayish-blue);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  width: 330px;
+  height: 510px;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-content {
+  width: 100%;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.card-heading {
+  padding-top: 2.25rem;
+  font-size: calc(1.25 * var(--font-size));
+  line-height: 1.5rem;
+}
+
+.card-text {
+  color: var(--desaturated-dark-blue);
+  padding: 0.75rem 2rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.03ch;
+}
+
+.card-footer {
+  width: 100%;
+  height: 66px;
+  position: absolute;
+  bottom: 0;
+}
+
+.credentials {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+}
+
+.author img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.author-name {
+  font-weight: 700;
+}
+
+.published-date {
+  color: var(--grayish-blue);
+}
+
+.share {
+  border: none;
+  background-color: var(--light-grayish-blue);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#share-svg {
+  pointer-events: none;
+  margin: 1px 0 0 1px;
+}
+
+.share:focus {
+  outline: 2px solid var(--grayish-blue);
+}
+
+.share-links {
+  width: 100%;
+  height: 100%; 
+  position: absolute;
+  z-index: 2;
+  background-color: var(--dark-grayish-blue);
+  display: none;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.share-links p {
+  color: var(--grayish-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.link {
+  margin-left: 1.25rem;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (min-width: 1024px){
+  .card-container {
+    width: 730px;
+    height: 280px;
+    display: flex;
+    box-shadow: 0px 20px 60px hsla(214, 17%, 51%, 0.3);
+  }
+
+  .card-image {
+    width: 285px;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .card-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    padding: 0 2.5rem;
+  }
+  
+  .card-heading {
+    padding-top: 2rem;
+    font-size: calc(1.5 * var(--font-size));
+    line-height: 1.75rem;
+  }
+
+  .card-text {
+    padding: 0.75rem 2.5rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.03ch;
+  }
+
+  .card-footer {
+    height: 70px;
+  }
+
+  .credentials {
+    align-items: flex-start;
+  }
+
+  .share-links {
+    width: 250px;
+    height: 55px;
+    border-radius: 10px; 
+    top: -82px;
+    right: -66px;
+    z-index: 10;
+    box-shadow: 0px 10px 20px hsla(214, 17%, 51%, 0.3);
+  }
+
+  .share-links::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 46%;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--dark-grayish-blue);
+    clear: both;
+    
+  }
+
+  .share-links p {
+    letter-spacing: 0.35rem;
+  }
+
+  .link {
+    margin-left: 1rem;
+  }
+}
