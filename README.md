@@ -24,13 +24,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/rating-screenshot.png)
+![](./images/screenshot.png)
 
 Screenshot of active states
 
 ### Links
 
-- Solution URL: [https://github.com/akshaypatel99/frontend-mentor/tree/main/article-preview-component](https://github.com/akshaypatel99/frontend-mentor/tree/main/article-preview-component)
+- Solution URL: [https://github.com/akshaypatel99/article-preview-component](https://github.com/akshaypatel99/article-preview-component)
 - Live Site URL: [https://akshaypatel99.github.io/article-preview-component/](https://akshaypatel99.github.io/article-preview-component/)
 
 ## My process
