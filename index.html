@@ -9,14 +9,12 @@
 			rel="icon"
 			type="image/png"
 			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
+			href="./images/favicon-32x32.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap"
-			rel="stylesheet"
-		/>
+			rel="stylesheet" />
 		<link rel="stylesheet" href="./styles.css" />
 
 		<title>Frontend Mentor | Article preview component</title>
@@ -38,8 +36,8 @@
 				<img
 					src="./images/drawers.jpg"
 					alt="Green drawers in a well designed room"
-					class="card-image"
-				/>
+					class="card-image" />
+
 				<section class="card-content">
 					<header class="card-header container">
 						<h1 class="card-heading">
@@ -59,47 +57,50 @@
 							<div class="author">
 								<img
 									src="./images/avatar-michelle.jpg"
-									alt="Author Michelle Appleton"
-								/>
+									alt="Author Michelle Appleton" />
 								<div class="author-details">
 									<p class="author-name">Michelle Appleton</p>
 									<p class="published-date">28 Jun 2020</p>
 								</div>
 							</div>
-							<button type="button" class="share">
+							<button
+								type="button"
+								class="share-button"
+								tab-index="0"
+								aria-controls="share-links"
+								aria-expanded="false">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="15"
 									height="13"
-									aria-hidden="true"
-									tab-index="0"
-									id="share-svg"
-								>
+									id="share-svg">
 									<path
 										id="share-svgPath"
 										fill="#6E8098"
-										d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-									/>
+										d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
 								</svg>
-								<span class="sr-only"
+								<span class="visually-hidden"
 									>Click to share article on social media</span
 								>
 							</button>
 						</div>
 
-						<div class="share-links container">
+						<div
+							class="share-links container"
+							id="share-links"
+							data-visible="false">
 							<p>Share</p>
 							<a href="#" class="link">
 								<img src="./images/icon-facebook.svg" alt="Facebook icon" />
-								<p class="sr-only">Share on Facebook</p>
+								<span class="visually-hidden">Share on Facebook</span>
 							</a>
 							<a href="#" class="link">
 								<img src="./images/icon-twitter.svg" alt="Twitter icon" />
-								<p class="sr-only">Share on Twitter</p>
+								<span class="visually-hidden">Share on Twitter</span>
 							</a>
 							<a href="#" class="link">
 								<img src="./images/icon-pinterest.svg" alt="Pinterest icon" />
-								<p class="sr-only">Share on Pinterest</p>
+								<span class="visually-hidden">Share on Pinterest</span>
 							</a>
 						</div>
 					</footer>
